@@ -2,6 +2,11 @@ CREATE DATABASE projetregime;
 
 USE projetregime;
 
+CREATE TABLE objectif(
+    idObjectif INTEGER PRIMARY KEY AUTO_INCREMENT,
+    labelObjectif VARCHAR(50)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
 CREATE TABLE utilisateur(
     idUtilisateur INTEGER PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(20),
@@ -14,11 +19,6 @@ CREATE TABLE utilisateur(
     poids INTEGER,
     idObjectif INTEGER,
     foreign key (idObjectif) references objectif(idObjectif)
-)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-
-CREATE TABLE objectif(
-    idObjectif INTEGER PRIMARY KEY AUTO_INCREMENT,
-    labelObjectif VARCHAR(50)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 CREATE TABLE aliment(
@@ -53,7 +53,7 @@ CREATE TABLE codeutilise(
 CREATE TABLE portefeuille(
     idPortefeuille INTEGER PRIMARY KEY AUTO_INCREMENT,
     idUtilisateur INTEGER,
-    compte DOUBLE,
+    compte DOUBLE
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 CREATE TABLE historiquedepot(
@@ -65,7 +65,15 @@ CREATE TABLE historiquedepot(
 
 CREATE TABLE historiqueachat(
     idPortefeuille INTEGER,
-    dateAchat,
+    dateAchat date,
     valeurAchat DOUBLE,
     foreign key (idPortefeuille) references portefeuille(idPortefeuille)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE administrateur(
+    idAdmin INTEGER PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(50),
+    mdpAdminHash VARCHAR(255)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
