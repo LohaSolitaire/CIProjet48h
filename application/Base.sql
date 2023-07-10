@@ -1,0 +1,9 @@
+CREATE DATABASE appli;
+
+USE appli;
+
+CREATE TABLE serveur(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(20),
+    email VARCHAR(50)
+);
