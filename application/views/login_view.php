@@ -1,8 +1,9 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Page de connexion</title>
     <link rel="stylesheet" href="<?php echo ('assets/css/login.css'); ?>">
@@ -18,12 +19,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-<div class="container">
+    <div class="container">
         <div class="img">
             <img src="assets/img/shopping.svg">
         </div>
         <div class="login-content">
-        <form action="<?php echo ($uri ='login/process_login');?>" method="post">
+            <form action="<?php echo ($uri = 'login/process_login'); ?>" method="post">
                 <img src="assets/img/avatar.svg">
                 <div class="input-div one">
                     <div class="i">
@@ -45,8 +46,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 </br>
                 <input type="submit" class="btn" value="Se Connecter">
+                <div>
+                    <a href="<?php echo ($uri = 'inscription')?>">S'inscrire?</a>
+                </div>
             </form>
         </div>
     </div>
 </body>
+
 </html>
