@@ -70,10 +70,48 @@ CREATE TABLE historiqueachat(
     foreign key (idPortefeuille) references portefeuille(idPortefeuille)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-
+CREATE TABLE exercicephysique(
+    idExercicePhysique INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nomExercice VARCHAR(50),
+    description VARCHAR(255) 
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 CREATE TABLE administrateur(
     idAdmin INTEGER PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(50),
     mdpAdminHash VARCHAR(255)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+
+
+
+insert into code(code, valeur) values ('168zerr78',20000);
+insert into code(code, valeur) values ('aze125opd',50000);
+insert into code(code, valeur) values ('iiyo752fg',20000);
+insert into code(code, valeur) values ('287tril47',100000);
+insert into code(code, valeur) values ('895df2er4',50000);
+insert into code(code, valeur) values ('4rt52e321',100000);
+insert into code(code, valeur) values ('opo895234',20000);
+insert into code(code, valeur) values ('1m21jkld9',100000);
+insert into code(code, valeur) values ('wwwe7a444',200000);
+insert into code(code, valeur) values ('mnu7iorth',100000);
+insert into code(code, valeur) values ('lopf94azc',20000);
+insert into code(code, valeur) values ('6763mfff1',50000);
+insert into code(code, valeur) values ('ercu935j5',100000);
+insert into code(code, valeur) values ('qwo7trv35',50000);
+insert into code(code, valeur) values ('zzbc36dd9',200000);
+
+
+insert into objectif(labelObjectif) values ('Augmenter son poids');
+insert into objectif(labelObjectif) values ('Réduire son poids');
+insert into objectif(labelObjectif) values ('Atteindre son IMC idéal');
+
+
+
+
+
+
+
+
+
+
